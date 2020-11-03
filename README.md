@@ -5,6 +5,7 @@ Port of Asterisk answer machine detection to Freeswitch
   
   Example usage
 
+```
   <extension name="from_sbc">
     <condition field="destination_number" expression="^485(.*)$">
       <action application="bridge" data="my_outcall=${originate {execute_on_answer='transfer AMD_APP XML public'}sofia/gateway/mycarrier/${destination_number} &park()}"/>
@@ -29,3 +30,4 @@ Port of Asterisk answer machine detection to Freeswitch
     </condition>
   </extension>
 
+```
